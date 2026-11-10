@@ -1,0 +1,5 @@
+/.devcontainer/      @ORGANISATION/tech-leads
+/.github/            @ORGANISATION/tech-leads
+/compose.yaml        @ORGANISATION/tech-leads
+/eslint.config.mjs   @ORGANISATION/tech-leads
+package.json         @ORGANISATION/tech-leads
