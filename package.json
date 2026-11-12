@@ -1,18 +1,36 @@
 {
+  "name": "scrap",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "crawl": "node --env-file-if-exists=.env src/cli.ts",
+    "sonder": "node src/sonder.ts",
+    "test": "node --test 'src/**/*.test.ts'",
+    "typecheck": "tsc",
+    "navigateur:installer": "playwright install chromium",
+    "lint": "eslint .",
+    "format": "prettier --write . '!db/data'",
+    "format:check": "prettier --check . '!db/data'",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "@google-cloud/bigquery": "^8.3.1",
+    "cheerio": "^1.2.0",
+    "playwright": "^1.65.0"
+  },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@types/node": "^24.19.2",
     "eslint": "^10.14.0",
     "eslint-config-prettier": "^10.1.8",
     "husky": "^9.1.7",
     "lint-staged": "^17.6.0",
     "prettier": "^3.9.10",
+    "typescript": "~6.0.3",
     "typescript-eslint": "^8.72.1"
-  },
-  "scripts": {
-    "lint": "eslint .",
-    "format": "prettier --write . '!db/data'",
-    "format:check": "prettier --check . '!db/data'",
-    "prepare": "husky"
   },
   "lint-staged": {
     "*.{ts,js,mjs}": [
